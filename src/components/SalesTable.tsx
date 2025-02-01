@@ -55,7 +55,7 @@ export default function SalesTable() {
 		<div className="relative overflow-x-auto mt-6">
 			<table className="w-full text-sm text-left rtl:text-right text-gray-800 ">
 				<thead className="text-xs text-gray-700 uppercase bg-gray-400">
-					<tr>
+					<tr className="text-center">
 						<th className="px-6 py-3">No</th>
 						<th className="px-6 py-3">No Transaksi</th>
 						<th className="px-6 py-3">Marketing</th>
@@ -67,7 +67,9 @@ export default function SalesTable() {
 				</thead>
 				<tbody>
 					{sales.map(sale => (
-						<tr key={sale.id} className="bg-gray-200 border-b border-gray-200">
+						<tr
+							key={sale.id}
+							className="text-center bg-gray-200 border-b border-gray-200">
 							<td className="px-6 py-4 border-b border-gray-400">{sale.id}</td>
 							<td className="px-6 py-4 border-b border-gray-400">
 								{sale.transaction_number}

@@ -32,7 +32,7 @@ export default function PaymentForm() {
 				const response = await getAllSales();
 
 				setTransactionNumbers(response.sales ?? []);
-				console.log(response);
+
 				setLoading(false);
 			} catch (error) {
 				setLoading(false);
@@ -160,7 +160,7 @@ export default function PaymentForm() {
 			<button
 				type="submit"
 				disabled={loading}
-				className="mt-5 w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 disabled:bg-gray-400">
+				className="mt-5 w-full bg-blue-500 text-white py-2 px-4 rounded-lg cursor-pointer hover:bg-blue-600 disabled:bg-gray-400">
 				{loading ? 'Memproses...' : 'Bayar'}
 			</button>
 		</form>

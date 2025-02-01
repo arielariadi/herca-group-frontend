@@ -7,7 +7,7 @@ const getAllSales = async () => {
 		const response = await axios.get(`${apiConfig.API_URL}/v1/sales`);
 
 		if (!response.data || !response.data.sales) {
-			throw new Error('Data sales tidak ditemukan');
+			throw new Error('Data sales tidak ditemukan!');
 		}
 
 		return response.data;

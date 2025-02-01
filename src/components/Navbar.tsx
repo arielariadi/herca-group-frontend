@@ -70,19 +70,6 @@ export default function Navbar() {
 								Pembayaran
 							</NavLink>
 						</li>
-						<li>
-							<NavLink
-								to="/riwayat-pembayaran"
-								className={({ isActive }) =>
-									`block py-2 px-3 rounded-sm md:p-0 ${
-										isActive
-											? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 '
-											: 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 '
-									}`
-								}>
-								Riwayat Pembayaran
-							</NavLink>
-						</li>
 					</ul>
 				</div>
 			</div>
