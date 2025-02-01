@@ -1,8 +1,12 @@
 import { Routes, Route } from 'react-router';
-import HomePage from './pages/HomePage';
+
 import Navbar from './components/Navbar';
-import NotFoundPage from './pages/NotFoundPage';
 import Footer from './components/Footer';
+
+import HomePage from './pages/HomePage';
+import PaymentPage from './pages/PaymentPage';
+
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
 	return (
@@ -11,6 +15,8 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/pembayaran" element={<PaymentPage />} />
+
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 

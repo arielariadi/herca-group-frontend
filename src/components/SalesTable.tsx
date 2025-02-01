@@ -26,7 +26,7 @@ export default function SalesTable() {
 				const response = await getAllSales();
 
 				setSales(response.sales ?? []);
-				console.log(response);
+
 				setLoading(false);
 			} catch (error) {
 				setError('Gagal mengambil data!');
@@ -79,13 +79,13 @@ export default function SalesTable() {
 								{formattedDate(sale.date)}
 							</td>
 							<td className="px-6 py-4 border-b border-gray-400">
-								{sale.cargo_fee}
+								{sale.cargo_fee.toLocaleString()}
 							</td>
 							<td className="px-6 py-4 border-b border-gray-400">
-								{sale.total_balance}
+								{sale.total_balance.toLocaleString()}
 							</td>
 							<td className="px-6 py-4 border-b border-gray-400">
-								{sale.grand_total}
+								{sale.grand_total.toLocaleString()}
 							</td>
 						</tr>
 					))}
