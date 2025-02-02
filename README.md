@@ -6,7 +6,7 @@ Repository ini adalah bagian frontend untuk tes coding di Herca Group
 
 1. Clone repository ini:
    ```bash
-    https://github.com/arielariadi/herca-group-frontend.git
+   git clone https://github.com/arielariadi/herca-group-frontend.git
    ```
 
 2. Install dependency
