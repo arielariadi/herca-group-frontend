@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from 'react';
 
@@ -83,8 +84,12 @@ export default function PaymentForm() {
 				setAmount(undefined);
 				setPaymentDate('');
 			}
-		} catch (error) {
-			Swal.fire('Error', 'Gagal melakukan pembayaran!', 'error');
+		} catch (error: any) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Gagal melakukan pembayaran!',
+				text: error.message || 'Terjadi kesalahan pada server',
+			});
 		} finally {
 			setLoading(false);
 		}
