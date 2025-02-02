@@ -26,8 +26,6 @@ export default function PaymentHistoryTable() {
 
 				setPaymentsHistoryData(response.paymentsHistory ?? []);
 
-				console.log('response:', response);
-
 				setLoading(false);
 			} catch (error) {
 				setError('Gagal mengambil Data!');
